@@ -1,0 +1,33 @@
+Description:
+The Product feature will allow to:
+
+- Add new products under specific categories and sub-categories.
+- View a list of all products.
+- Edit product details such as name, price.
+- Delete products that are no longer part of the inventory.
+
+Acceptance Criteria:
+Add Product:
+
+- A user can add a new product by selecting a category and sub-category.
+- The product form requires a unique product name and price.
+- The system validates all required fields before saving.
+- A confirmation message is displayed after successfully adding the product.
+
+View Products:
+
+- A user can view all products in a table, showing details such as product name, category, sub-category, price, and stock quantity.
+- The product list can be filtered by category, sub-category, or product name.
+
+Edit Product:
+
+- A user can select a product from the list and update its details, including price.
+- The system validates the updated details and ensures product name uniqueness.
+- A confirmation message is displayed after successfully updating the product.
+
+Delete Product:
+
+- A user can delete a product only if there are no active dependencies (eg: no active sales and purchase).
+- The system shows a warning message before deletion.
+- A confirmation message is displayed after successful deletion.
+

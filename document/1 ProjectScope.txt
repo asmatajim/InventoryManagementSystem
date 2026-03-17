@@ -1,0 +1,22 @@
+1. Inventory Management System
+Category-Sub-Category-Based Management: Classify products into categories, sub-categories and product.
+Forms: Category, Sub-Category, Product
+
+2. Supplier and Purchase Management
+Supplier Database: Store details of suppliers and manage contact information.
+Purchase Orders: Create and manage purchase orders, including order quantities, supplier details.
+Form: Supplier, Purchase
+
+4. Point of Sale (POS) System
+User-Friendly Interface: Easy-to-use POS interface for cashiers.
+Payment Methods: Support for Cash
+Receipt Generation: Print receipt.
+Forms: Sales
+
+5. Sales Reporting
+Sales Dashboard: Reporting on daily, weekly, monthly and yearly sales performance.
+Revenue and Profit Margins: Generate reports on total revenue, expenses, and profit margins(daily, weekly, monthly and yearly sales performance).
+Forms: Sales Report, Revenue Report
+
+6. Others
+ErrorLogging, Email

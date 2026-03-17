@@ -1,0 +1,49 @@
+﻿@model IEnumerable<KTMPOS.Common.Model.PurchaseBilling.SupplierRead>
+
+<h1>Suppliers</h1>
+
+<p>
+    <a asp-action="SupplierCreate" class="btn btn-primary">Create New Supplier</a>
+</p>
+
+<table class="table">
+    <thead class="table">
+        <tr>
+            <th>S.N.</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Contact Person</th>
+            <th>Phone Number</th>
+            <th>Email Address</th>
+            <th>Address</th>
+            @if ((await _authorizationService.AuthorizeAsync(User, Policy.PurchaseEntry)).Succeeded)
+            {
+                <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+            <tr>
+                <td>@supplier.SN</td>
+                <td>@supplier.Id</td>
+                <td>@supplier.Name</td>
+                <td>@supplier.ContactPerson</td>
+                <td>@supplier.PhoneNumber</td>
+                <td>@supplier.EmailAddress</td>
+                <td>@supplier.Address</td>
+                @if ((await _authorizationService.AuthorizeAsync(User, Policy.PurchaseEntry)).Succeeded)
+                {
+                    <td>
+                        <a asp-action="SupplierUpdate" asp-route-id="@supplier.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a data-supplier-id="@supplier.Id" href="#" class="btn btn-danger btn-sm supplierDelete">Delete</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    <script src="~/js/purchase/supplier.js" asp-append-version="true"></script>
+}

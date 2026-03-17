@@ -1,0 +1,20 @@
+﻿@if((await _authorizationService.AuthorizeAsync(User, Policy.Reporting)).Succeeded)
+{
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link text-white" data-bs-toggle="collapse" href="#reportingSubMenu" role="button" aria-expanded="false" aria-controls="reportingSubMenu">
+                Reporting
+            </a>
+            <div class="collapse" id="reportingSubMenu">
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Report" asp-action="Sales">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Report" asp-action="Revenue">Revenue</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+}

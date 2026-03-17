@@ -1,0 +1,45 @@
+﻿@model KTMPOS.Common.Model.Inventory.Products.ProductCreate;
+
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="ProductCreate" asp-action="ProductCreate" method="post">
+                <h2>Create Product.</h2>
+                <hr />
+                <div class="mb-3">
+                    <label asp-for="CategoryId" class="control-label">Category</label>
+                    <select id="ddlCategory" asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SubCategoryId" class="control-label">Sub Category</label>
+                    <select id="ddlSubCategory" asp-for="SubCategoryId" class="form-control" asp-items="ViewBag.SubCategories">
+                    </select>
+                    <span asp-validation-for="SubCategoryId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PurchasePrice" class="control-label"></label>
+                    <input asp-for="PurchasePrice" value="0" class="form-control" />
+                    <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SellingPrice" class="control-label"></label>
+                    <input asp-for="SellingPrice" value="0" class="form-control" />
+                    <span asp-validation-for="SellingPrice" class="text-danger"></span>
+                </div>
+                <div>
+                    <button id="product-submit" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/inventory/product.js" asp-append-version="true"></script>
+}

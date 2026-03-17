@@ -1,0 +1,51 @@
+﻿@model List<KTMPOS.Common.Model.Inventory.Products.ProductRead>
+
+<h1>Products</h1>
+
+<p>
+    <a asp-action="ProductCreate" class="btn btn-primary">Create New Product</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>PurchasePrice</th>
+            <th>SellingPrice</th>
+            <th>Category</th>
+            <th>SubCategory</th>
+            <th>CreatedBy</th>
+            <th>CreatedDate</th>
+            @if((await _authorizationService.AuthorizeAsync(User, Policy.InventoryEditOrDelete)).Succeeded)
+            {
+                <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var product in Model.Select((item, index) => new { Index = index, Data = item }))
+        {
+            <tr>
+                <td>@(product.Index + 1)</td>
+                <td>@product.Data.Name</td>
+                <td>@product.Data.PurchasePrice</td>
+                <td>@product.Data.SellingPrice</td>
+                <td>@product.Data.Category</td>
+                <td>@product.Data.SubCategory</td>
+                <td>@product.Data.CreatedBy</td>
+                <td>@product.Data.CreatedDate</td>
+                @if((await _authorizationService.AuthorizeAsync(User, Policy.InventoryEditOrDelete)).Succeeded)
+                {
+                    <td>
+                        <a asp-action="ProductUpdate" asp-route-id="@product.Data.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a data-product-id="@product.Data.Id" href="#" class="btn btn-danger btn-sm productDelete">Delete</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    <script src="~/js/inventory/product.js" asp-append-version="true"></script>
+}

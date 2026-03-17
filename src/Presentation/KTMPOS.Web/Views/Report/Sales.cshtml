@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <section>
+            <div>
+                <h2>Sales Report.</h2>
+                <hr />
+                <div class="mb-3">
+                    <label for="ddlFilter" class="control-label"></label>
+                    <select id="ddlFilter" class="form-control"></select>
+                </div>
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>S.N.</th>
+                            <th>Total Gross Amount</th>
+                            <th>Total Discount Amount</th>
+                            <th>Total Net Amount</th>
+                            <th>Total Records</th>
+                        </tr>
+                    </thead>
+                    <tbody id="salesReportTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/reporting/sales-report.js"></script>
+}

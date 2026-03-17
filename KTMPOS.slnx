@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/BAL/">
+    <Project Path="src/BAL/KTMPOS.BAL/KTMPOS.BAL.csproj" Id="e9eea0b3-57e6-4018-8894-37565a0c14d7" />
+  </Folder>
+  <Folder Name="/src/Common/">
+    <Project Path="src/Common/KTMPOS.Common/KTMPOS.Common.csproj" Id="6bab034e-a873-4937-bebe-017d91cc43e4" />
+  </Folder>
+  <Folder Name="/src/DAL/">
+    <Project Path="src/DAL/KTMPOS.DAL/KTMPOS.DAL.csproj" Id="0a53ee11-9c26-4de4-82b4-cb8bc8963f9e" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="src/Presentation/KTMPOS.Desktop/KTMPOS.Desktop.csproj" Id="b64dfa21-9808-468a-9dab-049eaf6dd4ba" />
+    <Project Path="src/Presentation/KTMPOS.Web/KTMPOS.Web.csproj" Id="f3510ce2-b6ed-4b7e-b5bc-9ea662929e74" />
+    <Project Path="src/Presentation/KTMPOS.WebAPI/KTMPOS.WebAPI.csproj" Id="7c876d90-8883-4fd2-b360-04c0d6c12e69" />
+  </Folder>
+</Solution>

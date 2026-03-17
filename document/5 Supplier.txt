@@ -1,0 +1,43 @@
+Description:
+The Supplier feature will allow to:
+
+- Add new suppliers.
+- View a list of all suppliers.
+- Edit supplier details.
+- Delete supplier details.
+
+Acceptance Criteria:
+
+Add Supplier:
+- The system must allow the user to add a new supplier by entering details such as:
+	- Name
+	- Contact Person
+	- Phone Number
+	- Email Address
+	- Address
+
+Edit Supplier:
+-The system must allow the user to update the supplier's information, such as contact details or product categories.
+
+Delete Supplier:
+- The user can delete a supplier, but only if they have no active purchase orders linked to them.
+- Display a warning message before deleting a supplier.
+
+View Suppliers:
+- The user can view a list of all suppliers in a tabular format.
+
+Search Suppliers:
+- The system must include a search feature to find suppliers quickly by name.
+
+Error Handling:
+- Display error messages for invalid inputs (e.g., incorrect phone or email format).
+- Prevent duplicate entries for the same supplier based on their email.
+- Prevent duplicate entries for the same supplier based on their phone.
+
+Supplier Form Details:
+- Fields:
+	- Supplier Name (required)
+	- Contact Person
+	- Phone Number (required, validated for format)
+	- Email Address (validated for format)
+	- Address

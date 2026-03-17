@@ -1,0 +1,16 @@
+Description:
+The Category feature will allow to:
+
+- Create new categories.
+- Edit category details when needed.
+- Delete categories that are no longer in use.
+- View a list of all categories.
+
+Acceptance Criteria:
+
+- A user can create a new category by entering a name.
+- The system ensures the category name is unique and required.
+- A confirmation message is displayed after successful creation.
+- A user can view a list of all existing categories as soon as category is created.
+- The system shows a warning message before deletion.
+- A confirmation message is displayed after successful deletion.

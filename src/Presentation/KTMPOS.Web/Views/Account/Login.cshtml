@@ -1,0 +1,24 @@
+﻿@model LoginRequest
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post" asp-controller="Account" asp-action="Login" asp-route-returnurl="@Context.Request.Query["returnUrl"]">
+                <h2>Login to your account.</h2>
+                <hr />
+                <div class="mb-3">
+                    <label asp-for="UserName" class="form-label">UserName</label>
+                    <input asp-for="UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

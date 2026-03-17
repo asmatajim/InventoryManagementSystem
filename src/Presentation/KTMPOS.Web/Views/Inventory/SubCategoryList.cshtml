@@ -1,0 +1,49 @@
+﻿@model List<KTMPOS.Common.Model.Inventory.SubCategories.SubCategoryRead>
+
+<h1>Sub Categories</h1>
+
+<p>
+    <a asp-action="SubCategoryCreate" class="btn btn-primary">Create New Sub Category</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>CreatedBy</th>
+            <th>CreatedDate</th>
+            <th>LastModifiedBy</th>
+            <th>LastModifiedDate</th>
+            @if((await _authorizationService.AuthorizeAsync(User, Policy.InventoryEditOrDelete)).Succeeded)
+            {
+                <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var subCategory in Model)
+        {
+            <tr>
+                <td>@subCategory.SN</td>
+                <td>@subCategory.Name</td>
+                <td>@subCategory.Category</td>
+                <td>@subCategory.CreatedBy</td>
+                <td>@subCategory.CreatedDate</td>
+                <td>@subCategory.ModifiedBy</td>
+                <td>@subCategory.ModifiedDate</td>
+                @if((await _authorizationService.AuthorizeAsync(User, Policy.InventoryEditOrDelete)).Succeeded)
+                {
+                    <td>
+                        <a asp-action="SubCategoryUpdate" asp-route-id="@subCategory.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="#" data-sub-category-id="@subCategory.Id" class="btn btn-danger btn-sm subCategoryDelete">Delete</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    <script src="~/js/inventory/sub-category.js" asp-append-version="true"></script>
+}

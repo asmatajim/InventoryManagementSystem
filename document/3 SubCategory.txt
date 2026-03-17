@@ -1,0 +1,17 @@
+Description:
+The Sub Category feature will allow to:
+
+- Create new sub categories.
+- Edit sub category details when needed.
+- Delete sub categories that are no longer in use.
+- View a list of all sub categories.
+
+Acceptance Criteria:
+
+- A user can select from a list of categories.
+- A user can create a new sub category under a category by entering a name.
+- The system ensures the sub category name is unique and required.
+- A confirmation message is displayed after successful creation.
+- A user can view a list of all existing sub categories as soon as sub category is created.
+- The system shows a warning message before deletion.
+- A confirmation message is displayed after successful deletion.
