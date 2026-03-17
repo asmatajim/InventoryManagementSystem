@@ -21,4 +21,4 @@ This repository contains two applications:
 - Supplier and Purchase Management
 - POS Module
 - Sales and Revenue Reports
-- Error Handling, Validation, Email Integration
+- Error Handling, Validation,
